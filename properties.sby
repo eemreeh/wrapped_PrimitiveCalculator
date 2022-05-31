@@ -5,10 +5,15 @@ mode prove
 smtbmc
 
 [script]
-read -formal wrapper.v rest of your source files.v
-prep -top wrapped_project
+read -formal wrapper.v ClockDivider.v Debouncer.v HexSevenSegmentDecoder.v PrimitiveALU.v PrimitiveCalculator.v RotaryEncoder.v
+prep -top wrapped_PrimitiveCalculator
 
 [files]
 wrapper.v
 properties.v
-rest of your source files.v
+PrimitiveCalculator_/src/ClockDivider.v 
+PrimitiveCalculator_/src/Debouncer.v
+PrimitiveCalculator_/src/HexSevenSegmentDecoder.v
+PrimitiveCalculator_/src/PrimitiveALU.v
+PrimitiveCalculator_/src/PrimitiveCalculator.v
+PrimitiveCalculator_/src/RotaryEncoder.v

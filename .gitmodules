@@ -1,0 +1,6 @@
+[submodule "PrimitiveCalculator"]
+	path = PrimitiveCalculator
+	url = https://github.com/eemreeh/PrimitiveCalculator-ASIC-Design.git
+[submodule "PrimitiveCalculator_"]
+	path = PrimitiveCalculator_
+	url = https://github.com/eemreeh/PrimitiveCalculator-ASIC-Design.git

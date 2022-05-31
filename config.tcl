@@ -2,11 +2,16 @@
 set script_dir [file dirname [file normalize [info script]]]
 
 # name of your project, should also match the name of the top module
-set ::env(DESIGN_NAME) project_name
+set ::env(DESIGN_NAME) wrapped_PrimitiveCalculator
 
 # add your source files here
 set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
-    $::env(DESIGN_DIR)/other source files.v"
+    $::env(DESIGN_DIR)/PrimitiveCalculator_/src/ClockDivider.v /
+    $::env(DESIGN_DIR)/PrimitiveCalculator_/src/Debouncer.v /
+    $::env(DESIGN_DIR)/PrimitiveCalculator_/src/HexSevenSegmentDecoder.v /
+    $::env(DESIGN_DIR)/PrimitiveCalculator_/src/PrimitiveALU.v /
+    $::env(DESIGN_DIR)/PrimitiveCalculator_/src/PrimitiveCalculator.v /
+    $::env(DESIGN_DIR)/PrimitiveCalculator_/src/RotaryEncoder.v"
 
 # target density, change this if you can't get your design to fit
 set ::env(PL_TARGET_DENSITY) 0.4
@@ -22,7 +27,7 @@ set ::env(FP_SIZING) absolute
 set ::env(SYNTH_DEFINES) "MPRJ_IO_PADS=38"
 
 # clock period is ns
-set ::env(CLOCK_PERIOD) "10"
+set ::env(CLOCK_PERIOD) "100"
 set ::env(CLOCK_PORT) "wb_clk_i"
 
 # macro needs to work inside Caravel, so can't be core and can't use metal 5
