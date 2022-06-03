@@ -14,13 +14,13 @@ interfaces: ['la1', 'gpio']
 caravel_test:
   recipe: "coco_test"
   directory: "test_PrimitiveCalculator"
-  id: 0
+  id: 7
   module_name: "wrapped_PrimitiveCalculator"
 
 # module test
 module_test:
   recipe: "all" 
-  directory: "PrimitiveCalculator"
+  directory: "PrimitiveCalculator_"
   makefile: "Makefile"
 
 # run the wrapper formal proof
